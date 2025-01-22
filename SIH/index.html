@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Explo - Safe</title>
+    <link rel="icon" href="e-flame-1024x1024.webp">
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="grid-container">
+
+      <!-- Main -->
+      <main class="main-container">
+        <div class="main-title">
+          <p class="font-weight-bold">SECTOR</p>
+        </div>
+
+        <div class="main-cards">
+
+          <div class="card">
+            <div class="card-inner">
+              <p  class="text-primary">TEMPERATURES</p>
+            </div>
+            <span id="idtemp" class="text-primary font-weight-bold">249</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">PRESSURE</p>
+            </div>
+            <span id="idprs" class="text-primary font-weight-bold">83</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">GAS-TOXICITY</p>
+            </div>
+            <span id="idgt" class="text-primary font-weight-bold">79</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">INVENTORY ALERTS</p>
+              <span class="material-icons-outlined text-red">notification_important</span>
+            </div>
+            <span class="text-primary font-weight-bold">56</span>
+          </div>
+
+        </div>
+
+        <div class="charts">
+
+          <div class="charts-card">
+            <p class="chart-title">TEMPERATURE</p>
+            <div id="bar-chart"><canvas id="temperatureChart"canvas></div>
+          </div>
+
+          <div class="charts-card">
+            <p class="chart-title">PRESSURE AND GAS TOXICITY</p>
+            <div id="area-chart">
+              <div class="outer1"><canvas id="pressureChart"></canvas></div>
+              <div class="outer2"><canvas id="gasToxicityChart"></canvas></div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+      <!-- End Main -->
+
+    </div>
+
+    <button id="Dashboard">Dashboard</button>
+
+    <script src="sms.js"></script>
+
+    <script type="module" src="scripts.js"></script>
+
+  </body>
+</html>
